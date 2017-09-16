@@ -10,7 +10,7 @@ const MonsterHealth = ({
 }) =>
     <div className={cx('MonsterHealth', {'MonsterHealth--flip': flip})}>
         <div className={'MonsterHealth__bar'} style={{
-            width: Math.min(currentHealth / health, 100) + '%'
+            width: (Math.min(currentHealth / health, 1) / 100) + '%'
         }}/>
     </div>
 
