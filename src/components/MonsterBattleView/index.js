@@ -6,11 +6,11 @@ import MonsterHealth from '../MonsterHealth'
 
 import './styles.css'
 
-const MonsterBattleView = ({name, currentHealth, flip, winner}) => (
+const MonsterBattleView = ({name, health, currentHealth, flip, winner}) => (
   <div className={'MonsterBattleView'}>
     <MonsterAvatar name={name} flip={flip} dead={currentHealth <= 0} />
     <MonsterName name={name} />
-    <MonsterHealth />
+    <MonsterHealth health={health} currentHealth={currentHealth} />
     {winner && <div className={'MonsterBattleView__fireworks'} />}
   </div>
 )
