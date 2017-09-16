@@ -7,7 +7,15 @@ import MonsterStats from '../MonsterStats'
 
 import './styles.css'
 
-const MonsterBattleView = ({name, attack, defense, health, currentHealth, flip, winner}) => (
+const MonsterBattleView = ({
+    name, 
+    attack, 
+    defense, 
+    health, 
+    currentHealth, 
+    flip, 
+    winner
+  }) => (
   <div className={'MonsterBattleView'}>
     <MonsterAvatar name={name} flip={flip} dead={currentHealth <= 0} />
     <MonsterHealth 
