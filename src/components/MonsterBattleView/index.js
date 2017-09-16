@@ -9,7 +9,11 @@ import './styles.css'
 const MonsterBattleView = ({name, health, currentHealth, flip, winner}) => (
   <div className={'MonsterBattleView'}>
     <MonsterAvatar name={name} flip={flip} dead={currentHealth <= 0} />
-    <MonsterHealth health={health} currentHealth={currentHealth}>
+    <MonsterHealth 
+      health={health} 
+      currentHealth={currentHealth} 
+      flip={flip}
+    >
       <MonsterName name={name} />
     </MonsterHealth>
     {winner && <div className={'MonsterBattleView__fireworks'} />}
