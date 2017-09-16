@@ -68,7 +68,12 @@ const withLocalStateLogic = Board => {
     }
 
     actionMethod = () => {
-      return this.startBattle;
+      const {turns, battleStarted} = this.state
+      return battleStarted
+        ? turns.length % 2 
+          ? this.monster2Attack
+          : this.monster1Attack
+        : this.startBattle;
     }
 
     render() {
